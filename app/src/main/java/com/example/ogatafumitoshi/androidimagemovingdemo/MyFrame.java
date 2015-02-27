@@ -17,7 +17,7 @@ public class MyFrame extends FrameLayout {
     // frame
     private static final int LAYOUT_FRAME = R.layout.my_frame;
     // image
-    private static final int ID_IMAGE = R.id.Frame_ImageView ;
+    private static final int ID_IMAGE = R.id.surface_view ;
     // sensitivity
     private final static int SENSITIVITY = 5;
     // view component
@@ -50,12 +50,6 @@ public class MyFrame extends FrameLayout {
         initFrame( context, attrs, defStyle );
     }
 
-    /*
-     * initFrame
-     * @param Context context
-     * @param AttributeSet attrs
-     * @param int defStyle
-     */
     private void initFrame( Context context, AttributeSet attrs, int defStyle ) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE );
@@ -66,11 +60,6 @@ public class MyFrame extends FrameLayout {
         mView.setOnTouchListener( new ViewTouchListener() );
     }
 
-    /*
-     * move view
-     * @param int x
-     * @param int y
-     */
     private void moveView( int x, int y ) {
         // initialize
         if ( isFirst ) {
@@ -84,11 +73,6 @@ public class MyFrame extends FrameLayout {
         redrawView( left, top );
     }
 
-    /*
-     * redraw view
-     * @param int left
-     * @param int top
-     */
     private void redrawView( int left, int top ) {
         int right = left + mView.getWidth();
         int bottom = top + mView.getHeight();
@@ -101,9 +85,6 @@ public class MyFrame extends FrameLayout {
         mView.layout( left, top, right, bottom );
     }
 
-    /*
-     * class ViewTouchListener
-     */
     private class ViewTouchListener implements OnTouchListener {
         // prevous position
         private int mPrevX = 0;

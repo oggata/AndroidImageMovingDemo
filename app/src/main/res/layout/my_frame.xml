@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/frame_background" >
 
-    <ImageView
-        android:id="@+id/Frame_ImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle" />
-
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        />
 </FrameLayout>
